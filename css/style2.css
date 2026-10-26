@@ -1,0 +1,545 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #17171a;
+    color: #E6E9EC;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#pakej-servis,
+#cara-order {
+    scroll-margin-top: 100px;
+}
+
+/* --- HEADER --- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 20px 50px;
+    background-color: #1b1c21;
+    border-bottom: 1px solid #333333;
+}
+
+.logo-link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.logo-icon {
+    color: #2BC48A;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    gap: 50px;
+}
+
+header nav a {
+    color: #E6E9EC;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+header nav a:hover {
+    color: #2BC48A;
+    transform: scale(0.95);
+}
+
+.btn-whatsapp {
+    background-color: #1A73E8;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1557b0;
+    transform: translateY(-2px);
+}
+
+/* --- PACKAGE SECTION --- */
+.package-section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.sub-title {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* --- LOCATION & COVERAGE BANNER --- */
+.location-banner {
+    background-color: #1b1c21;
+    border: 1px solid #2BC48A;
+    border-radius: 12px;
+    padding: 16px 24px;
+    max-width: 850px;
+    margin: 0 auto 35px auto;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(43, 196, 138, 0.15);
+}
+
+.location-banner p {
+    font-size: 0.95rem;
+    color: #ffffff;
+    margin: 4px 0;
+}
+
+.location-banner strong {
+    color: #2BC48A;
+}
+
+.location-banner .coverage-note {
+    color: #E6E9EC;
+    font-size: 0.9rem;
+}
+
+/* --- PACKAGES CONTAINER & CARDS --- */
+.packages-container {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.package-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 420px;
+    background-color: #1b1c21;
+    border: 2px solid #333333;
+    border-radius: 16px;
+    padding: 30px 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    border-color: #2BC48A;
+}
+
+.package-card.selected {
+    border-color: #2BC48A;
+    box-shadow: 0 0 20px rgba(43, 196, 138, 0.3);
+    background-color: #202229;
+}
+
+.badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+.badge-green {
+    background-color: rgba(43, 196, 138, 0.15);
+    color: #2BC48A;
+    border: 1px solid #2BC48A;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.price-green {
+    color: #2BC48A;
+}
+
+.package-name {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.package-name small {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    font-weight: normal;
+}
+
+.package-desc {
+    color: #a0a0a0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.btn-pilih {
+    background-color: transparent;
+    border: 2px solid #2BC48A;
+    color: #2BC48A;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-pilih:hover,
+.package-card.selected .btn-pilih {
+    background-color: #2BC48A;
+    color: #0D1B2A;
+}
+
+/* --- EXTRA SERVICES CONTAINER & CARDS --- */
+.extra-services-container {
+    margin-bottom: 30px;
+}
+
+.extra-card {
+    background-color: #1b1c21;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.extra-card h3 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* PRINTING SEPARATE CARD & BUTTON STYLES */
+.printing-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.printing-card-header h3 {
+    margin-bottom: 0;
+}
+
+.btn-pilih-print {
+    background-color: transparent;
+    border: 2px solid #2BC48A;
+    color: #2BC48A;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-pilih-print:hover,
+.btn-pilih-print.active-print {
+    background-color: #2BC48A;
+    color: #0D1B2A;
+}
+
+.printing-inputs {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* CHECKLIST RADIOS FOR DELIVERY OPTIONS */
+.delivery-checklist-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background-color: #17171a;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.checklist-item:hover {
+    border-color: #2BC48A;
+    background-color: #1f2026;
+}
+
+.checklist-item input[type="radio"] {
+    accent-color: #2BC48A;
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.item-text strong {
+    display: block;
+    color: #ffffff;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+.item-text p {
+    color: #a0a0a0;
+    font-size: 0.85rem;
+    line-height: 1.3;
+}
+
+/* --- DROPDOWNS & INPUTS --- */
+.dropdowns-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.dropdown-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.dropdown-group label {
+    color: #E6E9EC;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.custom-select,
+.custom-input {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #17171a;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.custom-select:focus,
+.custom-input:focus {
+    border-color: #2BC48A;
+}
+
+/* --- TOTAL PRICE & SEND ORDER BUTTON --- */
+.send-order-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1c21;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    padding: 20px 24px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.total-box span {
+    font-size: 1rem;
+    color: #a0a0a0;
+}
+
+.total-box strong {
+    font-size: 1.8rem;
+    color: #2BC48A;
+    margin-left: 10px;
+}
+
+.btn-send-order {
+    background-color: #2BC48A;
+    color: #0D1B2A;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-send-order:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(43, 196, 138, 0.4);
+}
+
+/* --- CARA ORDER SECTION --- */
+.order-section {
+    background-color: #1b1c21;
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid #333333;
+}
+
+.order-header h4 {
+    color: #2BC48A;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.order-header h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.step-card {
+    background-color: #17171a;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    padding: 25px 20px;
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-box {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(43, 196, 138, 0.15);
+    color: #2BC48A;
+    border: 1px solid #2BC48A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.step-card h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.step-card p {
+    color: #a0a0a0;
+    font-size: 0.85rem;
+}
+
+.arrow {
+    color: #2BC48A;
+    font-size: 1.5rem;
+}
+
+/* --- MOBILE RESPONSIVE FIXES --- */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px 20px;
+        gap: 12px;
+    }
+
+    .logo-link {
+        width: 100%;
+        text-align: left;
+    }
+
+    header nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+        padding-top: 10px;
+        border-top: 1px solid #333333;
+    }
+
+    header nav a {
+        font-size: 0.85rem;
+    }
+
+    .package-section {
+        padding: 30px 15px;
+    }
+
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    .printing-inputs {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .send-order-container {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .btn-send-order {
+        width: 100%;
+    }
+
+    .steps-container {
+        flex-direction: column;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+}

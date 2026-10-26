@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fix'it Prefix - Tempah Servis</title>
+    <link rel="stylesheet" href="css/style2.css?v=7">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="index.html" class="logo-link">
+            <span class="logo-icon">Fix'it</span> Prefix
+        </a>
+        <nav>
+            <a href="ServisOrder.html">Pakej Servis</a>
+            <a href="ServisOrder.html">Cara Order</a>
+            <a href="TestimoniFAQ.html">Testimoni</a>
+            <a href="TestimoniFAQ.html">FAQ</a>
+        </nav>
+    </header>
+
+    <!-- PAKEJ SERVIS -->
+    <section id="pakej-servis" class="package-section">
+        <h1 class="main-title">PILIH PAKEJ MESRA STUDENT ANDA</h1>
+
+        <!-- BANNER LOKASI & LIPUTAN SERVIS -->
+        <div class="location-banner">
+            <p><strong>Lokasi Utama:</strong> UiTM Cawangan Melaka, Kampus Alor Gajah (Kolej Tun Kudu)</p>
+            <p class="coverage-note">Kami juga menerima tempahan dari <strong>luar UiTM &amp; Kawasan sekitar Melaka! (Bandaraya Melaka dan Sekitar)</strong></p>
+        </div>
+
+        <!-- CONTAINER 2 PAKEJ UTAMA LAPTOP -->
+        <div class="packages-container">
+            <!-- Pakej 1 -->
+            <div class="package-card" id="pkg-cuci">
+                <div class="badge badge-green">POPULAR</div>
+                <div class="price price-green">RM39</div>
+                <h3 class="package-name">Pakej Cuci Dalaman<br><small>(Dust Cleaning)</small></h3>
+                <p class="package-desc">Pembersihan debu dan kotoran dalaman laptop secara menyeluruh untuk mengelakkan overheat.</p>
+                <button class="btn-pilih">Pilih Pakej</button>
+            </div>
+
+            <!-- Pakej 2 -->
+            <div class="package-card" id="pkg-paste">
+                <div class="badge badge-green">RECOMMENDED</div>
+                <div class="price price-green">RM79</div>
+                <h3 class="package-name">Pakej Cuci + Thermal Paste</h3>
+                <p class="package-desc">Pembersihan debu penuh + penukaran thermal paste baharu berkualiti tinggi untuk prestasi optimum.</p>
+                <button class="btn-pilih">Pilih Pakej</button>
+            </div>
+        </div>
+
+        <!-- OPSI TAMBAHAN & SERVIS PRINTING -->
+        <div class="extra-services-container">
+            <h2 class="sub-title">Servis Printing &amp; Kaedah Penyerahan</h2>
+
+            <!-- CARD SERVIS PRINTING -->
+            <div class="extra-card" id="printingCard">
+                <div class="printing-card-header">
+                    <h3>Servis Printing Document</h3>
+                    <button type="button" class="btn-pilih-print" id="btnTogglePrinting">Tambah Servis Printing</button>
+                </div>
+                
+                <div class="printing-inputs-wrapper" id="printingInputsWrapper" style="display: none; margin-top: 15px;">
+                    <div class="printing-inputs">
+                        <div class="dropdown-group">
+                            <label for="printType">Jenis Cetakan:</label>
+                            <select id="printType" class="custom-select">
+                                <option value="hp_single" data-price="0.30">Hitam Putih - 1 Sisi (RM0.30/helai)</option>
+                                <option value="hp_double" data-price="0.50">Hitam Putih - Bolak-Balik (RM0.50/helai)</option>
+                                <option value="color_single" data-price="0.50">Warna - 1 Sisi (RM0.50/helai)</option>
+                                <option value="color_double" data-price="1.00">Warna - Bolak-Balik (RM1.00/helai)</option>
+                            </select>
+                        </div>
+
+                        <div class="dropdown-group">
+                            <label for="printPages">Jumlah Muka Surat / Helai:</label>
+                            <input type="number" id="printPages" class="custom-input" min="1" value="1" placeholder="Masukkan jumlah">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KAEDAH PENYERAHAN & PENGAMBILAN (CHECKLIST OPTION) -->
+            <div class="extra-card">
+                <h3>Kaedah Penyerahan &amp; Pengambilan</h3>
+                <div class="delivery-checklist-container">
+                    <label class="checklist-item">
+                        <input type="radio" name="deliveryOption" value="walkin" checked>
+                        <span class="radio-mark"></span>
+                        <div class="item-text">
+                            <strong>Walk-in / Drop-off (RM0.00 - Percuma)</strong>
+                            <p>Serah laptop atau ambil sendiri hasil print di Kolej Tun Kudu.</p>
+                        </div>
+                    </label>
+
+                    <label class="checklist-item">
+                        <input type="radio" name="deliveryOption" value="pickup">
+                        <span class="radio-mark"></span>
+                        <div class="item-text">
+                            <strong>Pickup &amp; Delivery Dalam UiTM (+RM2.00)</strong>
+                            <p>Pengambilan laptop atau penghantaran kertas print terus ke bilik/asrama anda di UiTM.</p>
+                        </div>
+                    </label>
+
+                    <label class="checklist-item">
+                        <input type="radio" name="deliveryOption" value="pickup_luar">
+                        <span class="radio-mark"></span>
+                        <div class="item-text">
+                            <strong>Pickup &amp; Delivery Luar UiTM / Sekitar Melaka (+RM10.00 - RM25.00)</strong>
+                            <p>Penghantaran &amp; pengambilan di luar UiTM (Bandaraya Melaka &amp; sekitar, caj RM10-RM25 mengikut lokasi).</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- DROPDOWNS DETAIL LAPTOP & LOKASI -->
+        <div class="dropdowns-container">
+            <div class="dropdown-group">
+                <label for="laptopBrand">Jenama / Model Laptop (Jika ambil servis laptop):</label>
+                <input type="text" id="laptopBrand" class="custom-input" placeholder="Cth: ASUS TUF, Acer Aspire (Boleh kosongkan jika tiada servis laptop)">
+            </div>
+
+            <div class="dropdown-group">
+                <label for="userLocation">Lokasi Anda (Kolej / Alamat di Melaka):</label>
+                <input type="text" id="userLocation" class="custom-input" placeholder="Cth: Kolej Tun Kudu / Taman Kebaya, Alor Gajah">
+            </div>
+        </div>
+
+        <!-- TOTAL HARGA & BUTTON SEND -->
+        <div class="send-order-container">
+            <div class="total-box">
+                <span>Anggaran Jumlah: </span>
+                <strong id="totalPriceDisplay">RM0.00</strong>
+            </div>
+            <button class="btn-send-order" id="send-order-btn">Hantar Pesanan via WhatsApp</button>
+        </div>
+    </section>
+
+    <!-- CARA ORDER -->
+    <section id="cara-order" class="order-section">
+        <div class="order-header">
+            <h4>PROSES MUDAH</h4>
+            <h2>CARA MEMBUAT PESANAN</h2>
+        </div>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="icon-box">1</div>
+                <h3>Pilih Servis</h3>
+                <p>Pilih pakej laptop / printing &amp; kaedah serah</p>
+            </div>
+            <div class="arrow">➔</div>
+            <div class="step-card">
+                <div class="icon-box">2</div>
+                <h3>Hantar WhatsApp</h3>
+                <p>Sahkan perincian pesanan</p>
+            </div>
+            <div class="arrow">➔</div>
+            <div class="step-card">
+                <div class="icon-box">3</div>
+                <h3>Drop-off / Pickup</h3>
+                <p>Kami uruskan pesanan anda!</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
